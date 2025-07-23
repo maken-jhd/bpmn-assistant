@@ -246,7 +246,7 @@ export default {
       };
 
       try {
-        const response = await fetch('http://localhost:8000/determine_intent', {
+        const response = await fetch('/api/assistant/determine_intent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -281,7 +281,7 @@ export default {
           needs_to_be_final_comment: needsToBeFinalComment,
         };
 
-        const response = await fetch('http://localhost:8000/talk', {
+        const response = await fetch('/api/assistant/talk', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -335,7 +335,7 @@ export default {
           model: selectedModel,
         };
 
-        const response = await fetch('http://localhost:8000/modify', {
+        const response = await fetch('/api/assistant/modify', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),

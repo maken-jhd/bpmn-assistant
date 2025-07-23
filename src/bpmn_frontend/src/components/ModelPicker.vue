@@ -112,7 +112,7 @@ export default {
     async fetchAvailableProviders() {
       try {
         const response = await fetch(
-          'http://localhost:8000/available_providers',
+          '/api/assistant/available_providers',
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
